@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+<script>
+
+
+// var array = [];
+
+// for(var i = 0; i < 100; i++) {
+// 	array[i] = '';
+// 	array[0] = 'あ';
+// 	if(i % 5 === 0){
+// 		array[i] = 'い'
+// 	}
+// }
+
+// console.log(array);
+
+
+// var array = [];
+
+// for(var i = 0; i < 100; i++) {
+// 	array[i] = i;
+// 	if(i % 15 === 0){
+// 		array[i] = 'Fizz';
+// 	}else if(i % 5 === 0) {
+// 		array[i] = 'Buzz';
+// 	}
+// 	else if(i % 3 === 0){
+// 		array[i] = 'FizzBuzz';
+// 	}
+// 	else{
+// 		array[i] = 'X';
+// 	}
+// }
+// console.log(array);
+
+// var array = [];
+// for(var i = 0; i < 100; i++){
+// 	array[i] = i;
+// }
+
+// for(var i = 0; i < array.length; i++) {
+// 	array[i] = i;
+// 	if(i % 3 != 0){
+// 		array[i] = 'Fizz';
+// 	}
+// }
+
+// console.log(array);
+
+
+// for(var i = 0; i  < array.length; i++){
+//     console.log(array[i]);
+// }
+
+
+var getMax = function(data){
+	var num = data[0];
+
+	for (var i = 0; i < data.length; i++) {
+	if(num > data[i]){
+		var num = data[i];
+	}
+	}
+	    return num;
+
+}
+
+
+
+var result = getMax([2, 5, 1, 9, 8]);
+console.log(result); // 9と表示
+
+
+</script>
+</body>
+</html>
