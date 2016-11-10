@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+<script>
+//問題3
+var array = [2, 5, 1, 8, 9];
+
+// 奇数番目と偶数番目の要素を入れ替える処理
+
+for(var i = 0; i < array.length; i++){
+  if(i % 2 === 0 && array[i+1]){
+    var tmp = array[i];
+    array[i] = array[i+1];
+    array[i+1] = tmp;
+
+  }
+
+
+
+for(var i = 0; i < array.length; i++){
+    console.log(array[i]);
+
+
+array = [['a','b']]
+console.log('もん',array[0]);
+
+</script>
+</body>
+</html>

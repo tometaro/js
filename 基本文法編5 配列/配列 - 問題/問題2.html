@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+<script>
+//引数として渡された配列の要素の中で、最大値を持つ要素を返す関数を定義してください。
+
+
+var getMax = function(data){
+    //処理
+    var max = 0;
+
+    for(var i = 0; i  < data.length; i++){
+      if (max < data[i]) {
+        max = data[i];
+      }
+    }
+    console.log(max);
+}
+
+var result = getMax([2, 5, 1, 9, 8]);
+console.log(result); // 9と表示
+
+</script>
+</body>
+</html>

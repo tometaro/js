@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+<script>
+
+//問題1
+
+// (1) 配列に対して1から100までの数値を格納してください。
+
+var array = [];
+
+// arrayに対して1から100までの数値を格納する処理
+
+for(var i = 0; i < 100; i++){
+    array[i] = i +1;
+}
+
+console.log(array);
+
+for(var i = 0; i  < array.length; i++){
+    console.log('(1)',array[i]);
+}
+
+// (2) 上記の配列の中身を次のように変更してください。
+// 3の倍数が格納されていたらFizzという文字列に変更する。
+// 5の倍数が格納されていたらBuzzという文字列に変更する。
+// 15の倍数が格納されていたら、FizzやBuzzではなく、FizzBuzzという文字列に変更する。
+
+
+for(var i = 0; i < 100; i++){
+	var n = i+1;
+	if ( n % 15 === 0){
+		array[i] = 'FizzBuzz';
+	}else if( n % 15 === 0){
+		array[i] = 'FizzBuzz';
+	}else if( n % 15 === 0){
+		
+	}
+
+    array[i] = i +1;
+}
+
+console.log(array);
+
+for(var i = 0; i  < array.length; i++){
+    console.log('(1)',array[i]);
+}
+
+</script>
+</body>
+</html>
