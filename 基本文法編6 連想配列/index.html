@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+<script>
+
+//演習2
+
+//問1. for文を使い、コンソールに1から100までの整数を表示してください。
+for(var i = 0; i < 100; i++){
+    var num = i + 1;
+    console.log('問1',num);
+}
+
+//問2. for文とif文を利用して、コンソールに30から80までの整数を5つおきに表示してください(30, 35, 40…, 75, 80)
+for(var i = 0; i < 100; i++){
+    var num = i + 1;
+    if(30 <= num && num <= 80 && num % 5 === 0 ){
+      console.log('問2',num);
+    }
+}
+
+//問3. for文とif文を利用して、コンソールに100以下の3の倍数と5の倍数を全て表示してください(3, 5, 6…,99, 100)
+for(var i = 0; i < 100; i++){
+    var num = i + 1;
+    if(num % 3 === 0 || num % 5 === 0 ){
+      console.log('問3',num);
+    }
+}
+
+</script>
+</body>
+</html>

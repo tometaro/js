@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+<script>
+
+//まとめ問題
+
+//問題1
+
+// 次のような機能を持つ関数を定義してください。
+
+// 最初に実行した時にはコンソールに1を表示する。
+// その後、実行を繰り返すたびに表示する値を1ずつインクリメントする。
+// 10まで表示したら、その次に実行した時に1を表示する。
+// 以降2と3を繰り返す。
+
+var num = 0;
+var increment = function(){
+    num++;
+    if(num > 10){
+      num = 1;
+    }
+    console.log('問題1',num);
+};
+for(var i = 0; i < 100; i++){
+    increment();
+};
+
+//問題2
+
+// 次のような機能を持つ関数を名前付き関数と無名関数の2通りの方法で作ってください。
+
+// 3つの引数を受け取る。
+// 1番目と2番目の引数は数値型のデータを受け取り、演算に使用する。
+// 3番目の引数は真偽値型のデータを受け取り、演算の種類を決定する。
+// 3番目の引数がtrueの時、1番目の引数と2番目の引数を加算した値を返す。
+// 3番目の引数がfalseの時、1番目の引数から2番目の引数を減算した値を返す。
+
+var calc = function(num1, num2, bool){
+  if(bool){
+    return num1 + num2;
+  }
+  return num1 - num2;
+};
+
+function calc(num1, num2, bool){
+  if(bool){
+    return num1 + num2;
+  }
+  return num1 - num2;
+};
+
+
+
+</script>
+</body>
+</html>
