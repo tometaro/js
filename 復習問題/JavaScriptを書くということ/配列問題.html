@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+<script>
+
+//問1
+
+// var array = [];
+
+// // arrayに対して1から100までの数値を格納する処理
+// for(var i = 1; i <= 100; i++){
+// 	array[array.length] = i 
+// }
+
+// for(var i = 0; i  < array.length; i++){
+//     console.log(array[i]);
+// }
+// console.log('問1',array);
+
+// array[0] = 1
+// array[1] = 2
+// array[2] = 3
+
+
+var array = [];
+
+// arrayに対して1から100までの数値を格納する処理
+for(var i = 0; i < 100; i++){
+	var num = i + 1
+	array[array.length] = num;
+}
+
+for(var i = 0; i  < array.length; i++){
+    console.log(array[i]);
+}
+console.log('問1',array);
+
+
+
+//問2
+var array = [];
+
+// arrayに対して1から100までの数値を格納する処理
+for(var i = 0; i < 100; i++){
+	var num = i + 1;
+
+	if(num % 15 ===0){
+		array[i] = 'FizzBuzz';
+	}else if(num % 5 === 0){
+		// array[i] = 'Buzz';
+		array.push('Buzz');
+	}else if(num % 3 ===0){
+		// array[i] = 'Fizz';
+		array.push('Fizz');
+
+	} else {
+		// array[array.length] = num;//下記と同じ処理
+		array.push(num);
+	}
+
+}
+
+for(var i = 0; i  < array.length; i++){
+    console.log(array[i]);
+}
+console.log('問2',array);
+
+
+//問3
+
+var array = [2, 5, 1, 8, 9, 4];
+
+for(var i = 0; i < array.length; i++){
+	if(i % 2 === 0 && array[i + 1]){
+		var num = array[i];
+		array[i] = array[i + 1];
+		array[i + 1] = num;
+	}
+}
+// 奇数番目と偶数番目の要素を入れ替える処理
+
+for(var i = 0; i < array.length; i++){
+    console.log('問3',array[i]);
+}
+
+
+
+</script>
+</body>
+</html>

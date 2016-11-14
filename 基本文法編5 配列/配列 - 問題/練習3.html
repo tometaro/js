@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+<script>
+// 最大値を返すためのアルゴリズム
+
+// 最大値を保存するための変数を1つ定義する。
+// まずは配列の最初の要素の値を最大値とみなして保存する。
+// 2番目の要素の値と保存した値を比較し、保存した値より大きければ、その値を最大値として保存し直す。
+// 3番目の要素についても同じ処理を繰り返す。
+// 4番目 〃
+// 5番目 〃
+// 全ての要素に対して上記の処理を繰り返したら、最大値として保存している値を返す。
+
+
+var getMax = function(data){
+	var max =  data[0];
+
+	for(var i = 0; i < data.length; i++){
+		if (max < data[i]) {
+			max = data[i];
+		}
+	}
+
+	return max;
+
+}
+var result = getMax([2, 5, 1, 9, 8]);
+console.log('問題2',result); // 9と表示
+
+
+
+</script>
+</body>
+</html>

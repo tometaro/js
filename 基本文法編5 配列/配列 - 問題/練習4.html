@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+<script>
+// 問題3
+// 配列の奇数番目と偶数番目の要素を入れ替えてください。
+// 同じ記述で、配列の要素数が偶数でも奇数でも正しく動くようにすること。
+
+// var array = [2, 5, 1, 8, 9, 4, 7];
+
+// // 奇数番目と偶数番目の要素を入れ替える処理
+
+// for(var i = 0; i < array.length; i++){
+// 	if(i % 2 === 0 && array[i + 1]){
+// 	var num = array[i];
+// 	array[i] = array[i + 1];
+// 	array[i + 1] = num;
+
+// 	}
+// }
+
+// for(var i = 0; i < array.length; i++){
+//     console.log(array[i]);
+// }
+
+var getMax = function(data){
+    max = data[0];
+
+	for (var i = 0; i < data.length; i++) {
+	    if(max < data[i]){
+	    	max = data[i];
+    	}
+	}
+	return max;
+}
+var result = getMax([2, 5, 1, 9, 8]);
+console.log(result); // 9と表示
+
+
+
+</script>
+</body>
+</html>
