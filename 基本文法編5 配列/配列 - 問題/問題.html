@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+<script>
+
+
+
+
+// 問題4
+// 次の処理を実行する関数を定義してください。
+
+// 引数として2つの配列を受け取る。
+// 2つの配列の共通の要素数を返す。
+
+var countCommonElement = function(array1, array2){
+    var count = 0;
+    for (var i = 0; i < array1.length; i++) {
+        for (var j = 0; j < array2.length; j++) {
+            if (array1[i] == array2[j]) {
+                count++;
+            };
+        };
+    };
+    return count;
+};
+var count = countCommonElement(
+    [8, 3, 'red', 4, 'green'],
+    [3, 'green', 'yellow', 2, 5]
+);
+
+console.log('問題4',count); // 2
+
+
+
+
+// 問題5
+// 引数として渡された配列の中身を昇順にソートする関数を定義してください。
+
+var bubbleSort = function(data){
+    for (var i = 0; i < data.length; i++) {
+        for (var j = i + 1; j < data.length; j++) {
+            if(data[i] > data[j]){
+                var tmp = data[i];
+                data[i] = data[j];
+                data[j] = tmp;
+            }
+        }
+    }
+    return data;
+}
+var result = bubbleSort([2, 5, 1, 9, 8]);
+console.log('問題5',result); // 1, 2, 5, 8, 9と表示
+
+</script>
+</body>
+</html>

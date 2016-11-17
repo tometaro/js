@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+<script>
+// 総合問題
+// 問題1
+// 1〜100までの整数の内、奇数だけを出力してください。
+for (var i = 0; i < 100; i++) {
+	if(i % 2 != 0){
+		console.log('問題1',i);
+	}
+}
+
+// 問題2
+// 処理を100回繰り返し、下記のように出力してください。
+// 1から順に出力する。
+// 10まで出力したら1に戻る。
+var num = 0;
+var increment = function(){
+    num++;
+    if(num > 10){
+      num = 1;
+    }
+    console.log(num);
+};
+
+for(var i = 0; i < 100; i++){
+    increment();
+};
+
+// 問題3
+// 1〜100までの数値をコンソール上に表示してください。
+// ただし、3の倍数の時だけ「さーん」と出力すること。
+for (var i = 1; i < 100; i++) {
+	var num = i;
+	if(i % 3 === 0){
+		num = 'さーん';
+	}
+	console.log('問題3',num);
+}
+
+// 問題4
+// 次の関数を定義してください。関数名も考えること。
+// 数値の引数を2つ取る。 
+// 2つの数値と、その間の整数を全て足し、結果を返す。
+// 第一引数より第二引数が小さい場合でも、正しく結果を返す形にすること。
+var result = function(start,end){
+  for(var i = start, total = 0; i <= end; i++){
+      total += i;
+      
+  }
+  return total;
+};
+console.log(result(1, 3));
+</script>
+</body>
+</html>

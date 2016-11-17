@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+<script>
+// 関数
+
+// 問題1
+// 2つの引数を加算した結果を返す関数を定義してください。
+var fun = function(num1,num2){
+	return num1 + num2;
+}
+console.log('問題1',fun(1,2));
+
+// 問題2
+// 2つの引数を減算した結果を返す関数を定義してください。
+var hoge = function(num1,num2){
+	return num1 - num2;
+}
+console.log('問題2',hoge(10,5));
+
+// 問題3
+// 2つの引数を乗算した結果を返す関数を定義してください。
+var add = function(num1,num2){
+	return num1 + num2;
+}
+console.log('問題3',add(10,20));
+
+// 問題4
+// 2つの引数を除算した結果を返す関数を定義してください。
+var add = function(num1,num2){
+	return num1 / num2;
+}
+console.log('問題4',add(10,20));
+
+// 問題5
+// 2つの文字列を結合した結果を返す関数を定義してください。
+var add = function(num1,num2){
+	return num1 + num2;
+}
+console.log('問題5',add('こん','ちわ'));
+
+// 問題6
+// 引数として与えた3つの数値の平均値を求める関数を定義してください。
+var add = function(num1,num2,num3){
+	return (num1 + num2 + num3) / 3;
+}
+console.log('問題6',add(10,20,30));
+
+// 問題7
+// 数値の引数を1つ与えて、その数値を2乗した結果を返す関数を定義してください。
+var add = function(num1){
+	return num1 * 2;
+}
+console.log('問題7',add(10));
+
+// 問題8
+// 数値の引数を1つ与えて、その数値を半分にした結果を返す関数を定義してください（割り切れない場合は少数表記で返す）
+var add = function(num1){
+	return num1 / 2 ;
+}
+console.log('問題8',add(10));
+
+// 問題9
+// 数値の引数を1つ与えて、偶数の場合にtrue, 奇数の場合にfalseを返す関数を定義してください。
+// ※if文は使わないこと。
+var add = function(num1){
+	return num1 % 2 === 0 ;
+	
+// if(num1 % 2 === 0){
+// 	return true;
+// }else {
+// 	return false;
+// }
+}
+console.log('問題9',add(9));
+
+// 問題10
+// 問題1と問題2で作った関数を組み合わせて、下記を実装してください。
+
+// 変数tasuを定義し、問題1で作った関数の実行結果を格納する（実行時の引数は1、2）
+// 変数hikuを定義し、問題2で作った関数の実行結果を格納する（実行時の引数は10、5）
+// 変数goukeiを定義し、上記2つの変数を足し合わせたものを代入する。
+var tasu = fun(1,2); 
+console.log('tasu',tasu);
+
+var hiku = hoge(10,5); 
+console.log(hiku);
+
+var gokei = tasu + hiku;
+console.log('問題10',gokei);
+
+
+</script>
+</body>
+</html>

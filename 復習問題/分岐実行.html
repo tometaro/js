@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+<script>
+// 分岐実行 問題
+
+// 問題1
+// 変数a, bを定義し、2つの変数を比較した時、比較結果によって下記のように分岐する処理を書いてください
+// aとbが等しい：「同じ」と出力
+// aとbが異なる：「違う」と出力
+var a = 2; //変数内の数値は自由に変更すること
+var b = 1;
+
+if(a != b){
+	console.log('分岐実行 問題1','違う');
+}else{
+	console.log('分岐実行 問題1','同じ');
+}
+
+// 問題2
+// 変数a, bを定義し、2つの変数を比較した時、比較結果によって下記のように分岐する処理を書いてください。
+if(a === b){
+	console.log('分岐実行 問題2','aとbは等しい');
+}else if(a > b){
+	console.log('分岐実行 問題2','aはbより大きい');
+}else if(a < b){
+	console.log('分岐実行 問題2','aはbより小さい');
+}
+
+// 問題3
+// 変数ageを定義し、ageに代入された数値によって下記のように分岐実行する処理を書いてください。
+
+// 10未満：「10歳未満」と出力
+// 10以上20未満：「10代」と出力
+// 20以上30未満：「20代」と出力
+// 30以上40未満：「30代」と出力
+// 40以上：「40歳以上」と出力
+// マイナスの数値：「不正な数値です」と出力
+
+var age = 34; // 数値は自由に変更して試すこと
+if(age >= 10 && age < 20){
+	console.log('分岐実行 問題3','10代')
+}else if(age >= 20 && age < 30){
+	console.log('分岐実行 問題3','20代')
+}else if(age >= 30 && age < 40){
+	console.log('分岐実行 問題3','30代')
+}else if (age < 0){
+	console.log('分岐実行 問題3 不正な数値です')
+}
+
+// 問題4
+// 次の関数を定義してください。関数名も考えること。
+
+// 数値の引数を1つ取る。
+// 数値の7を受け取った場合にだけ、「ラッキー7」という文字列を返す。
+// それ以外の数値はそのまま返す。
+
+var seven = function(num) {
+	// body...
+	if (num === 7) {
+		return 'ラッキー7';
+	}
+	return num;
+}
+console.log('分岐実行 問題4',seven(7));
+
+
+// 問題5
+// (1)
+// 引数を1つ取り、その値の型を返す関数を定義してください。`
+var result = function(num) {
+	return num;
+}
+console.log('分岐実行 問題5 (1)',result(11111));
+
+// (2)
+
+// 次の関数を定義してください。関数名も考えること。
+
+// 引数を1つ取る。
+// 引数が文字列型の場合：文字列：（引数の文字列）を返す。
+// ex. 文字列hogeを受け取った場合：文字列：hogeを返す。
+// 引数が数値型の場合：数値：（引数の数値）を返す。
+// 引数が真偽値型の場合：真偽値：（引数の真偽値）を返す。
+
+var result = function(num) {
+	if (typeof num === 'string') {
+		return '文字列：' + num;
+	}else if(num === 'hoge'){
+		return '文字列：hoge';
+	}else if(typeof num == 'number'){
+		return '数値：'+ num;
+	}else if(typeof num === 'boolean'){
+		return num;
+	}
+
+}
+
+console.log('分岐実行 問題5 (2)',result(true));
+
+</script>
+</body>
+</html>

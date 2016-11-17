@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+<script>
+// 問題1
+// 引数で指定された色のカラーコードを返す関数を作ってください。
+// 但し、色とカラーコードは連想配列を使って管理すること。
+
+var data = {
+    'red' : '#FF0000',
+    'green' : '#00FF00',
+    'blue': '#0000FF',
+};
+
+var getColorCode = function(color){
+    if(!data[color]){
+        return '未登録';
+    }
+    return data[color];
+};
+console.log(getColorCode('問題1','red')); // '#FF0000'と表示
+console.log(getColorCode('問題1','green')); // '#00FF00'と表示
+console.log(getColorCode('問題1','blue')); // '#0000FF'と表示
+console.log(getColorCode('問題1','yellow')); // '未登録'と表示
+
+// 問題2
+// 引数として渡された配列の中で、同じ文字列の出現回数をカウントしてください。
+// 文字列の最終的なカウント数を、文字列として1行にまとめて返してください。
+
+var bubbleSort = function(data){
+    for (var i = 0; i < data.length; i++) {
+        for (var j = i + 1; j < data.length; j++) {
+            if(data[i] > data[j]){
+                var tmp = data[i];
+                data[i] = data[j];
+                data[j] = tmp;
+            }
+        }
+    }
+    return data;
+}
+var result = bubbleSort([2, 5, 1, 9, 8]);
+console.log(result); // 1, 2, 5, 8, 9と表示
+
+</script>
+</body>
+</html>
