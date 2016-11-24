@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+<script>
+
+// 連想配列 - 問題
+
+// 問題1
+// 引数で指定された色のカラーコードを返す関数を作ってください。
+// 但し、色とカラーコードは連想配列を使って管理すること。
+
+// 色とカラーコードを関連付けるための連想配列を定義する
+// 取りあえず'red'、'green'、'blue'を定義すれば十分
+var data = {
+	'red' : '#FF0000',
+	'green' : '#00FF00',
+	'blue' : '#0000FF',
+};
+
+var getColorCode = function(color){
+    if(!data[color]){
+        return '未登録';// 登録されていない場合は「未登録」と返す
+    }
+    return data[color];// dataを参照して、colorが登録されていたら対応するカラーコードを返す
+};
+console.log('問題1',getColorCode('red')); // #FF0000
+console.log('問題1',getColorCode('green')); // #00FF00
+console.log('問題1',getColorCode('blue')); // #0000FF
+console.log('問題1',getColorCode('yellow')); // 未登録
+
+
+
+
+// 問題2
+// 引数として渡された配列の中で、同じ文字列の出現回数をカウントしてください。
+// 文字列の最終的なカウント数を、文字列として1行にまとめて返してください。
+
+// 雛形
+var count = function(data){
+	var saveCount = {};//連想配列初期化
+   //処理
+};
+var result = count( ['orange', 'apple', 'lemon', 'apple', 'apple', 'orange']);
+console.log(result); // orange = 2 lemon = 1 apple = 3
+// 出現回数をカウントするためのアルゴリズム
+
+// 出現回数を保存するための連想配列を定義する。
+// この連想配列のキーには出現した文字列を、バリューには出現回数を保存する。
+// 配列の要素を順番に調べ、その文字列が連想配列のキーとして登録されているか調べる。
+// 未登録の場合、その文字列が初めて出現したことを表すので、新規に登録する(バリューは1を指定する)
+// 登録済の場合、その文字列が既に何回か出現したことを表すので、対応するバリューを1加算する。
+
+
+
+</script>
+</body>
+</html>

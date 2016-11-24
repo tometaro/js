@@ -7,29 +7,24 @@
 <body>
 <script>
 
-//演習2
+// キーは''で囲わなくても良い 
+var obj = {
+    key1 : 'value1',
+    key2 : 'value2',
+    key3 : 'value3'
+};
 
-//問1. for文を使い、コンソールに1から100までの整数を表示してください。
-for(var i = 0; i < 100; i++){
-    var num = i + 1;
-    console.log('問1',num);
-}
+console.log(Object.keys(obj));
 
-//問2. for文とif文を利用して、コンソールに30から80までの整数を5つおきに表示してください(30, 35, 40…, 75, 80)
-for(var i = 0; i < 100; i++){
-    var num = i + 1;
-    if(30 <= num && num <= 80 && num % 5 === 0 ){
-      console.log('問2',num);
-    }
-}
+// もちろんこれを変数に代入できる
+var arr = Object.keys(obj);
+console.log(arr); // ["key1", "key2", "key3"]
 
-//問3. for文とif文を利用して、コンソールに100以下の3の倍数と5の倍数を全て表示してください(3, 5, 6…,99, 100)
-for(var i = 0; i < 100; i++){
-    var num = i + 1;
-    if(num % 3 === 0 || num % 5 === 0 ){
-      console.log('問3',num);
-    }
-}
+// 要素数を数えるのは取得した配列のlengthを参照すれば良い
+console.log(arr.length) // 3
+
+// 一行で要素数を数える場合
+console.log(Object.keys(obj).length); // 3
 
 </script>
 </body>

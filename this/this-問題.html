@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+<script>
+// 問題1
+// 次の機能をオブジェクトのメソッドとして定義し、実行してください。
+
+// 最初に実行した時にはコンソールに1を表示する。
+// その後、実行を繰り返すたびに表示する値を1ずつインクリメントする。
+// 10まで表示したら、その次に実行した時に1を表示する。
+// 以降2と3を繰り返す。
+
+var incrementor = {
+	data : 0,
+
+    increment : function(){
+    	// this.data = this.data + 1;
+    	this.data++;
+
+    	if(this.data > 10){
+    		this.data = 1;
+    }
+    	console.log('問題1',this.data);
+
+    }
+};
+
+for(var i = 0; i < 100; i++){
+    incrementor.increment();
+} 
+
+// 問題2
+// 次の3つの機能を持つオブジェクトを作成してください。
+
+// ユーザから渡された配列を保存する。
+// 保存した配列の最大値を返す。
+// 保存した配列の最小値を返す。
+
+// 配列の演習2でやったgetmax 使用
+
+var compare ={
+    set : function(data){
+        this.data = array;// 受け取った配列を保存する
+    },
+    getMax : function(){
+        // 保存した配列の要素の中で最大値を返す
+    },
+    getMin : function(){
+        // 保存した配列の要素の中で最小値を返す
+    }
+};
+
+compare.set([6, 1, 8, 5, 2]);
+console.log(compare.getMax()); // 8と表示
+console.log(compare.getMin()); // 1と表示
+
+</script>
+</body>
+</html>

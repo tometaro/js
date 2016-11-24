@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+<script>
+
+///////////////////////////////////////////////
+
+
+//すべて足す
+var add = function(arg1){
+    var sum = 0;
+    for(var i = 0; i < arguments.length; i++){
+        sum += arguments[i];
+    }
+    return sum;
+}
+
+console.log(add(16,8,4));
+
+
+///////////////////////////////////////////////
+
+
+//第一引数からすべて引く
+var suv = function(arg1){
+    var sum = arguments[0];
+    for(var i = 1; i < arguments.length; i++){
+        sum -= arguments[i];
+    }
+    return sum;
+}
+
+console.log(suv(16,8,4));
+
+
+///////////////////////////////////////////////
+
+
+//平均
+var acerage = function(arg1){
+    var sum = 0;
+    for(var i = 0; i < arguments.length; i++){
+        sum += arguments[i];
+    }
+    // return sum;
+    return sum / arguments.length;
+}
+
+console.log(acerage(16,8,4));
+
+
+///////////////////////////////////////////////
+
+</script>
+</body>
+</html>
