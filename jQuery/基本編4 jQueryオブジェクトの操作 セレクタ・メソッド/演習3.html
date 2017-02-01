@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <style>
+        .target{
+            margin: 30px auto;
+            border: solid 1px #808080;
+            border-collapse: collapse;
+        }
+        .target td{
+            border:solid 1px #808080;
+            width: 80px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 12px;
+            text-align: center;
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <table class="target">
+    <tr><td>1行1列</td><td></td><td>1行3列</td><td></td><td></td></tr>
+    <tr><td>2行1列</td><td></td><td></td><td></td><td>2行5列</td></tr>
+    <tr><td>3行1列</td><td>3行2列</td><td></td><td></td><td></td></tr>
+    <tr><td>4行1列</td><td></td><td>4行3列</td><td></td><td></td></tr>
+    <tr><td>5行1列</td><td></td><td></td><td></td><td>5行5列</td></tr>
+    <tr><td>6行1列</td><td></td><td></td><td>6行4列</td><td></td></tr>
+
+</table>
+<script>
+
+/////////////////////////////////////
+
+//演習3
+
+//tableの偶数行の背景色を水色(#00FFFF)に変更してください。
+    $('tr:even').css('background-color','#00FFFF');
+
+//文字の書かれているtdの背景色を黄色(#FFFF00)に変更してください。
+    $('td:parent').css('background-color','#FFFF00');
+
+/////////////////////////////////////
+
+</script>
+</body>
+</html>

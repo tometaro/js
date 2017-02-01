@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+<script>
+
+///////////////////////////////////////////////
+
+// 加算処理
+// data内の数値が100より小さい場合は処理を繰り返す。
+
+var data = 0;
+
+while(data < 100){
+  data += 1;
+}
+
+console.log(data); // 100
+
+///////////////////////////////////////////////
+
+// 配列への追加処理
+// 配列要素が条件より少ない場合に、追加（push）を繰り返す。
+
+var array = [];
+
+while(array.length < 10){
+  array.push('item');
+}
+
+console.log(array); // ["item", "item", "item", "item", "item", "item", "item", "item", "item", "item"]
+
+///////////////////////////////////////////////
+
+// do...while文
+// 中カッコ内の処理が必ず1度実行される。
+// 以降はwhile文の条件がtrueになる限り実行される。
+// while文の場合、条件次第で括弧内の処理が一度も実行されないことがあるが、最低でも一度は実行したい場合に使う。
+
+var i = 0;
+do {
+/* 必ず1度実行される。
+その後は i < 5がtrueになる限り実行される。 */
+  i += 1;
+  console.log(i);
+} while (i < 5);
+
+// 演習
+// 問題1
+// コンソールに1から100まで表示させてください。
+
+var data = 0;
+
+while(data < 100){
+  data ++;
+    console.log('問題1',data);
+
+}
+
+// 問題2
+// コンソール上に0〜100までの範囲の偶数を表示してください。
+
+var data = 0;
+
+while(data <= 100){
+    if(data % 2 === 0){
+        console.log('問題2',data);
+    }
+    data ++;
+}
+
+//ifなし
+
+var data = 0;
+
+while(data <= 100){
+        console.log('問題2',data);
+    data +=2;// +2づつ足す
+}
+
+
+// 問題3
+// 下記の要件を満たす関数poisonを定義・実行してください。
+
+// 渡された連想配列内のhpを繰り返し10ずつ減らす。
+// 10減らすたびにコンソール上に「(nameの値)は10ダメージ！」と表示する。
+// 0になったら「(nameの値)は倒れてしまった！」と表示する。
+// 10減らした結果、hpがマイナスの値になった場合は0に補正すること。
+// hpが0になったらループを抜ける。
+
+var human = {
+    name: 'mario',
+    hp: 35
+}
+
+var poison = function(cdata){
+    while(human.hp > 0){
+        human.hp -= 10;
+    }
+};
+
+poison(human);
+
+console.log(human);
+
+</script>
+</body>
+</html>

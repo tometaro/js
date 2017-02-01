@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+.target {
+    background-color: #AAFFAA;
+    border: solid 1px #00FF00;
+    float: left;
+    height: 100px;
+    line-height: 100px;
+    margin: 30px;
+    text-align: center;
+    width: 100px;
+}
+.clearfix:after {
+    clear: both;
+    content: '.';
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+    </style>
+
+</head>
+<body>
+<div class="clearfix" id="container1">
+    <div class="target">1番目</div>
+    <div class="target">2番目</div>
+    <div class="target">3番目</div>
+    <div class="target">4番目</div>
+</div>
+<div class="clearfix" id="container2">
+    <div class="target">5番目</div>
+    <div class="target">6番目</div>
+    <div class="target">7番目</div>
+</div>
+<script>
+$('.target').eq(1).css('background-color','#FF0000');
+console.log('.target');
+</script>
+</body>
+</html>

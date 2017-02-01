@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+<script>
+
+///////////////////////////
+
+// 演習
+// 問題1
+// 次の処理を書いてください。
+
+// 変数httpStatusを定義する。
+// httpStatus内の値（数値）によって、コンソールに表示する結果を変える。
+// 値が200：「OK」と表示する。
+// 値が404：「not found」と表示する。
+// 値が500：「error」と表示する。
+// httpStatusの数値を上記の数値のいずれかに変更した場合に、コンソール上に適切な結果が表示されるようにする。
+// OKとnot found が一緒に表示されるような形ではダメ。
+
+var httpStatus = 404;
+
+switch (httpStatus) {
+  case 200:
+    console.log('OK');
+    break;
+  case 404:
+    console.log('not found');
+    break;
+  case 500:
+    console.log('error');
+    break;
+}
+
+///////////////////////////
+
+// 問題2
+// データ型によって分岐する処理を書いてください。
+
+// 変数dataを定義する。
+// dataの型によってコンソールに表示させる結果を変える。
+// 文字列型：「文字列です」と表示。
+// 数値型：「数値です」と表示。
+// 真偽値型：「真偽値です」と表示。
+// 関数型：「関数です」と表示。
+// オブジェクト型：「オブジェクトです」と表示。
+// undefined：「何もありません」と表示。
+
+var data = 'a';
+
+switch (typeof data) {
+  case "number":
+    console.log('OK');
+    break;
+  case "string":
+    console.log('not found');
+    break;
+  case "boolean":
+    console.log('error');
+    break;
+}
+
+// console.log(typeof 'test');
+
+///////////////////////////
+"number"
+"string"
+"boolean"
+"function"
+"object"
+"undefined"
+"object"
+
+
+
+
+
+</script>
+</body>
+</html>

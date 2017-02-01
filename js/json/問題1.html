@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+<script>
+// 文字列として受け取る。
+// var data = [{
+//     "name" : "北海道",
+//      "code" : 1},
+//     {"name" : "青森",
+//     "code" : 2},
+//     {"name" : "沖縄",
+//     "code" : 47}
+//   ];
+
+// // 文字列として受け取ったデータをeval関数に渡す。
+// // var json = eval('(' + data + ')');
+// var json = JSON.parse(data);
+
+
+// 配列と連想配列に対する参照方法で必要な情報を取得できる。
+// console.log(json[1].name); //青森
+
+
+//////////////////////////////////////////////
+
+//データのJSON文字列化
+var data = {a:'test', b:12, c:'hoge'};
+
+// 文字列化
+var json = JSON.stringify(data);
+
+console.log('例2',json); // {"a":"test","b":12,"c":"hoge"}
+
+//////////////////////////////////////////////
+
+//問題1
+// # company
+// - name = leihauoli
+// - telephone = 03-5738-0653
+// - fax = 03-5738-0654
+
+// ## employee
+// - id=000001 name=s.takeuchi
+// - id=000002 name=a.yamaguchi
+// - id=000005 name=i.takeharu
+// - id=000006 name=m.hachiyanagi
+// - id=000009 name=k.morohoshi
+
+var company = {
+    "name" : "leihauoli",
+    "telephone" : "03-5738-0653",
+    "fax" : "03-5738-0654",
+    "employee" : [
+        {"id" : "000001","name" : "s.takeuchi"},
+        {"id" : "000001","name" : "s.takeuchi"},
+        {"id" : "000001","name" : "s.takeuchi"},
+        {"id" : "000001","name" : "s.takeuchi"}
+    ]
+};
+
+// var json = JSON.stringify(company);
+
+console.log('問題1',company); 
+console.log('問題1',company.employee[1].id); 
+
+
+//////////////////////////////////////////////
+
+//問題2
+
+var hoge = '{"name" : "leihauoli","telephone" : "03-5738-0653","fax" : "03-5738-0654","empoyee" : [{"id" : "000001","name" : "s.takeuchi"},{"id" : "000001","name" : "s.takeuchi"},{"id" : "000001","name" : "s.takeuchi"},{"id" : "000001","name" : "s.takeuchi"}]}';
+
+var json = eval('(' + hoge + ')');//復元する関数
+console.log('問題2',json);
+
+//////////////////////////////////////////////
+
+//問題3
+
+var company = {
+    "name" : "leihauoli",
+    "telephone" : "03-5738-0653",
+    "fax" : "03-5738-0654",
+    "employee" : [
+        {"id" : "000001","name" : "s.takeuchi"},
+        {"id" : "000001","name" : "s.takeuchi"},
+        {"id" : "000001","name" : "s.takeuchi"},
+        {"id" : "000001","name" : "s.takeuchi"}
+    ]
+};
+
+var json = JSON.stringify(company);
+console.log('問題3 文字列化',json); 
+
+
+var obj = JSON.parse(json);//文字列の解析
+console.log('問題3　文字列',obj); 
+
+
+
+</script>
+</body>
+</html>

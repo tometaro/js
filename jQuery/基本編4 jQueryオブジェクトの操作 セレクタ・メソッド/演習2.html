@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    .target{
+        width: 100px;
+        height: 100px;
+        margin: 30px;
+        background-color: #AAFFAA;
+        border: solid 1px #00FF00;
+        text-align: center;
+        line-height:100px;
+        float: left;
+    }
+    </style>
+
+</head>
+<body>
+
+    <div class="target" id="target1">1番目</div>
+    <div class="target" id="target2">2番目</div>
+    <div class="target" id="target3">3番目</div>
+<script>
+
+/////////////////////////////////////
+
+//全てのdiv要素の背景色を水色(#00FFFF)に変更してください。
+    $('.target').css('background-color','#00FFFF');
+
+//1番目のdiv要素のidの値をコンソールに表示してください。
+    console.log($('.target:first').html());
+
+//2番目のdiv要素内のテキストを「second」というラベルを持つボタンに置き換えてください。
+    $('#target2').html('<button type=“button”>second</button>');
+
+//3番目のdiv要素の幅と高さを2倍にしてください。
+    $('#target3').height('200px').width('200px');
+
+
+/////////////////////////////////////
+
+        var $target = $('.target');
+
+        // widthメソッドにより、HTML要素の幅が取得できる
+        var width = $target.width();
+
+        // コンソールに200と表示される
+        console.log(width);
+
+/////////////////////////////////////
+
+</script>
+</body>
+</html>

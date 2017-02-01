@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <style>
+        .target {
+            background-color: #AAFFAA;
+            border: solid 1px #00FF00;
+            float: left;
+            line-height: 100px;
+            margin: 30px;
+            text-align: center;
+        }
+        .target1 {
+            height: 100px;
+            width: 100px;
+        }
+        .target2 {
+            height: 150px;
+            width: 100px;
+        }
+        .target3 {
+            height: 100px;
+            width: 150px;
+        }
+        .clearfix:after {
+            clear: both;
+            content: '.';
+            display: block;
+            height: 0;
+            visibility: hidden;
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <div class="clearfix" id="container1">
+        <div class="target target1">1番目</div>
+        <div class="target target2">2番目</div>
+        <div class="target target3">3番目</div>
+        <div class="target target1">4番目</div>
+    </div>
+    <div class="clearfix" id="container2">
+        <div class="target target1">5番目</div>
+        <div class="target target2">6番目</div>
+        <div class="target target3">7番目</div>
+    </div>
+
+<script>
+
+/////////////////////////////////////
+
+//以下のHTMLに対して、次の処理を実行してください。
+
+//container1の子要素の中で、幅と高さが共に100pxのdiv要素の背景を水色に変更してください。
+
+$('#container1').find('.target').each(function(){
+    var $tome = $(this);
+    var height = $tome.height();
+    var width = $tome.width();
+    if(height === 100 && width === 100){
+        $tome.css('background-color','#eee');
+    }
+    console.log(height,width)  
+})
+
+/////////////////////////////////////
+
+</script>
+</body>
+</html>

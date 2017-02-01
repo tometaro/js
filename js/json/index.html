@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+<script>
+// 文字列として受け取る。
+var data = '[{"name" : "北海道", "code" : 1},{"name" : "青森", "code" : 2},{"name" : "沖縄", "code" : 47}]';
+
+// 文字列として受け取ったデータをeval関数に渡す。
+// var json = eval('(' + data + ')');
+var json = JSON.parse(data);
+
+
+// 配列と連想配列に対する参照方法で必要な情報を取得できる。
+console.log(json[1].name); //青森
+
+
+//////////////////////////////////////////////
+
+//データのJSON文字列化
+var data = {a:'test', b:12, c:'hoge'};
+
+// 文字列化
+var json = JSON.stringify(data);
+
+console.log('例2',json); // {"a":"test","b":12,"c":"hoge"}
+</script>
+</body>
+</html>
