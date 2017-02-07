@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <style>
+        #target {
+            background-color: #AAFFAA;
+            border: solid 1px #00FF00;
+            font-size: 12px;
+            height: 100px;
+            line-height: 100px;
+            margin: 30px;
+            opacity: 1.0;
+            position: absolute;
+            text-align: center;
+            width: 100px;
+        }
+    </style>
+
+
+</head>
+<body>
+
+<div id="target">HTML要素</div>
+
+<script>
+
+/////////////////////////////////////
+
+$('#target').animate({ height: 0,bottom: 0 },  500);
+
+/////////////////////////////////////
+
+</script>
+</body>
+</html>

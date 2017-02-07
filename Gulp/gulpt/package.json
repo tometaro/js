@@ -1,5 +1,6 @@
 {
   "devDependencies": {
-    "gulp-sass": "^2.3.2"
+    "gulp-sass": "^2.3.2",
+    "gulp-uncss": "^1.0.6"
   }
 }

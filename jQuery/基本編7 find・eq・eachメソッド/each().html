@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <style>
+        
+    </style>
+
+</head>
+<body>
+
+<div>要素1</div>
+<div>要素2</div>
+<div>要素3</div>
+
+<script>
+
+/////////////////////////////////////
+
+// 全ての要素内のテキストをコンソールに出力する
+
+$('div').each(function(){
+    var $myself = $(this);
+    console.log($myself.width());
+});
+
+/////////////////////////////////////
+
+</script>
+</body>
+</html>
